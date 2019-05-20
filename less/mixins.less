@@ -1,1 +1,38 @@
 // Mixins Here
+
+.font-class {
+    color: white;
+    font-size: 1.4em; 
+}
+
+ /*.font-size(@font-size, @font-family) {
+
+}*/
+
+/*.fontfamily(@font-family) {
+}*/
+
+ .background(@backgroundcolor, @align) {
+     background-color: @backgroundcolor;
+     text-align: @align;
+    }
+
+.btn {
+    /*background-color:black; */
+    border-radius: round(15px);
+    /*color: white; */
+    cursor: pointer;
+    width: 100px; 
+    /*font-size: 1.4em;*/  
+    padding: 10px; 
+    /*text-align: center;*/
+    font-family: 'Russo One', sans-serif;
+    .font-class();
+    .background(black, center);
+
+    &:hover, &:focus {
+        background-color: lighten(black, 15%);
+        color: red; 
+    }
+}
+
